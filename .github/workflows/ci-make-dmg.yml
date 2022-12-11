@@ -82,3 +82,9 @@ jobs:
           path: |
             Uplink-Mac-Universal.zip
             Uplink-Mac-Universal.zip.sha256.txt
+      - name: Upload release artifacts
+        uses: Roang-zero1/github-upload-release-artifacts-action@v2
+        with:
+          args: "Uplink-Mac-Universal.zip"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
